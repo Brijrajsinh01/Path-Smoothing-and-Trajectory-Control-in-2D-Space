@@ -44,7 +44,7 @@ class Nav2GoalSender(Node):
 
         if self.goal_active:
             time_elapsed = time.time() - self.goal_start_time
-            if time_elapsed > 30:
+            if time_elapsed > 10:
                 self.get_logger().warn(f"Goal stuck. Canceling after {time_elapsed:.2f} seconds.")
                 self.cancel_goal()
             else:

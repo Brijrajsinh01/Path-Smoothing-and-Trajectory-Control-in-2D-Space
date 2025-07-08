@@ -46,6 +46,7 @@ install(
   scripts/exploration_goal_publisher.py
   scripts/nav2_copy.py
   scripts/contour_frontier_explorer.py
+  scripts/frontier_test.py
   DESTINATION lib/${PROJECT_NAME}
 )
 
