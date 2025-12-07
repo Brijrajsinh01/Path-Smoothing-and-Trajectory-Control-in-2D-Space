@@ -22,7 +22,7 @@ class CoordinateTransformer(Node):
         self.timer = self.create_timer(0.20, self.transform_coordinates)
 
     def transform_coordinates(self):
-        try:
+        # try:
             # Look up the transform from odom to base_link
             transform = self.tf_buffer.lookup_transform('odom', 'base_link', rclpy.time.Time())
 
@@ -45,8 +45,8 @@ class CoordinateTransformer(Node):
             # Publish the transformed pose (position and orientation)
             self.coordinates_publisher.publish(pose_in_base_link)
 
-        except (LookupException, ConnectivityException, ExtrapolationException) as e:
-            self.get_logger().error(f'Could not transform coordinates: {e}')
+        # except (LookupException, ConnectivityException, ExtrapolationException) as e:
+        #     self.get_logger().error(f'Could not transform coordinates: {e}')
 
 def main(args=None):
     rclpy.init(args=args)

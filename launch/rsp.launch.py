@@ -32,11 +32,6 @@ def generate_launch_description():
 
 
 
-     # Include launch file launch_sim.launch
-    launch_slam = IncludeLaunchDescription(
-        PythonLaunchDescriptionSource(os.path.join(pkg_path, 'launch', 'slam_launch.py'))
-    )
-
     # Launch!
     return LaunchDescription([
         DeclareLaunchArgument(
@@ -45,5 +40,4 @@ def generate_launch_description():
             description='Use sim time if true'),
 
         node_robot_state_publisher,
-        launch_slam,
     ])
