@@ -33,7 +33,7 @@ class WaypointGenerator(Node):
         self.declare_parameter('pattern', 'sequential')  # Can be specific or 'sequential'
         self.declare_parameter('size', 3.0)
         self.declare_parameter('num_points', 8)
-        self.declare_parameter('publish_rate', 1.0)
+        self.declare_parameter('publish_rate', 3.0)
         self.declare_parameter('waypoint_tolerance', 0.3)
         self.declare_parameter('enable_deletion', True)
         self.declare_parameter('sequential_mode', True)  # NEW!
